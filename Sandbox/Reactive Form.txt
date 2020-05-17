@@ -1,0 +1,55 @@
+-- in app.module.ts --
+import { ReactiveFormsModule } from '@angular/forms';  // <-- #1 import module
+
+ imports: [
+    BrowserModule,
+    ReactiveFormsModule // <-- #2 add to @NgModule imports
+  ],
+
+1. ngModel
+-----------
+   <input [(ngModel)]="name" #ctrl="ngModel" required>
+   name: string = '';
+
+2. forms
+---------------
+---in components 
+import { FormControl, FormGroup } from '@angular/forms';
+
+userForm = new FormGroup ({
+    name: new FormControl()
+  });
+
+
+<form [formGroup]="userForm" novalidate>
+  <div class="form-group">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name">
+    </label>
+  </div>
+</form>
+
+
+
+---------------
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+  
+userForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.createForm();
+  }
+
+  createForm() {
+    this.userForm = this.fb.group({
+      name: ['', Validators.required ],
+      street: '',
+      city: '',
+      state: '',
+      zip: '',
+      power: '',
+      sidekick: ''
+    });
+  }
+}
+

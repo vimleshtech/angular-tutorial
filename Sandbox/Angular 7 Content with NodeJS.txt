@@ -1,0 +1,338 @@
+ANGULAR 7 TRAINING CONTENT
+==========================================================
+Lists of Skills covered in our Angular 7 Course:
+JavaScript
+JSON
+AJAX
+AngularJS
+Express JS
+Node JS
+Many Popular NPMs
+MongoDB
+
+TypeScript
+Section 1: TypeScript Introduction 
+What is TypeScript?
+Features of TypeScript.
+How to compile TypeScript into JS?
+What is Transpilation?
+Real-time Practicals
+Installing Typescript Engine in Node.
+Compiling TS code (source) to JS code (source).
+
+
+Section 2: Node Introduction
+What is Node?
+Node Environment setups.
+A Brief Node Introduction.
+What is Node Modules?
+What are the Types of Node Modules available?
+What is Local & Global Module?
+
+
+Section 3: TypeScript Environment Setups
+Install TypeScript Engine in Node.
+Execute the 1stTypeScript code.
+What is watcher?
+Introduction of ts-node NPM.
+
+Section 4: Variables in TS
+Difference between Static & Dynamic type checking.
+How to Declare & Define Variables in TS?
+What is any in TS?
+Difference between let & var.
+Template string introduction.
+
+
+Section 5: Datatypes in TS
+Brief Introduction of below types,
+- String
+- Number
+- Boolean
+- Array
+- Object
+- Tuple
+- Enum
+- Any
+- Void
+- Never
+- Null
+- Undefined
+
+
+Section 6: Different Types of Parameters in TS
+Difference between JS parameter & TS Parameter.
+Let vs var vs const
+Passing Parameters to the functions.
+How to pass optional parameter?
+What is Default Parameter?
+How to use default parameter before required parameter?
+Rest Parameter overview.
+
+
+ Section 7: Features in TS.
+Arrow functions.
+Where to use Arrow functions?
+Destructing an Array.
+Destructing and Object.
+
+
+Section 8: OOPS in TypeScript
+What is Class?
+What is Class definition? ?
+What is Object? ?
+How to Create Object?
+Brief introduction about,
+- Property
+- Method
+- Constructor
+What is Inheritance?
+Different types of Inheritance in TS. ?
+Access modifiers in TS. ?
+Readonly in TS. ?
+Static Property & Methods in TS.
+Interface in TypeScript.
+
+
+Angular 7
+Section 1: Introduction to Angular
+What is Angular?
+Difference between framework & Library?
+History of Angular and its versions.
+Why Angular?
+Features of Angular.
+What is Single Page Application?
+Difference between SPA & Traditional Application.
+What is MVC?
+How MVC works in Client & Server sides?
+
+
+Section 2: Angular 7 Environment setups
+What is Angular CLI?
+Purpose of the CLI.
+Angular CLI installation.
+Create a Basic Angular App by using CLI.
+Executing the Angular Application in the browser.
+How an Angular app Bootstrapping?
+Brief explanation about the structure of the Angular App.
+
+
+Section 3: Main Building Blocks of Angular
+An Overview of the below Building blocks of Angular
+- Modules
+- Components
+- Templates
+- Metadata
+- Data binding - Directives
+- Services
+- Dependency Injection.
+What is Module & its importance?
+What is Root Module and Child Module?
+
+Section 4: Components in Angular 7
+What is Component?
+How to create a Component manually and through CLI?
+What is Component decorator and its Meta data?
+Component’s Structure overview.
+Component Lifecycle Hooks.
+Components Interactions overview.
+How to pass Data from Parent to Child & Child to Parent?
+
+Section 5: Data Bindings and Event Bindings in Angular 7
+What is Data Binding?
+What is Two-way Data Binding?
+String Interpolation.
+Style Binding, Class Binding.
+Overview of Event Binding.
+Element reference and $event service in Angular.
+Event Filtering
+
+
+
+Section 6: Services in Angular 7
+What is Services?
+Why should we use Services?
+How to create Services in Angular?
+Singleton Object - Overview
+What is Dependency Injection?
+How to use Dependency Injection?
+What is providers?
+What is @Injectable()?
+What is Hierarchical DI?
+
+Section 7: Directives & Custom Directives in Angular 7
+What is Directives?
+What are the Different kind of Directives available in Angular?
+Difference between Structural & Attribute Directives.
+Overview of All Structural & Attribute Directives.
+Difference between ngIf & hidden directives.
+How to create Custom Attribute Directive?
+How to create Custom Structural Directive?
+How to pass Input property to the custom directive?
+How to receive Input property from the custom directive?
+
+
+Section 8: Pipes in Angular 7
+What is Pipe in Angular?
+Purpose of the Pipes.
+Difference between Pipes & Directives.
+Detailed explanation of the below Pipes,
+- Lowercase
+- Uppercase
+- Titlecase
+- Slice
+- Json
+- Number
+- Percent
+- Currency
+- Date
+What is Pure Pipe & Impure Pipe?
+How to create Custom Pipes?
+What is chaining Pipes?
+What is Parameterized Pipe?
+
+
+Section 9: Components Communication
+Overview of Components Interaction
+Share data between components by using Service
+Component Interaction from Parent to Child.
+Component Interaction from Child to Parent.
+@ViewChild decorator overview
+Components Interaction by using Event Emitter & Subject and observable
+
+
+
+Section 10: Event Emitter and other special Directives
+What is Event Emitter?
+When to use Event Emitter?
+How to transfer data with Event Emitter?
+How to create Custom Events and Trigger?
+View Encapsulation Overview.
+What is ng-content and its purpose?
+ng-container Directive overview.
+
+
+Section 11: Template Driven Form in Angular
+What is Template Driven Form?
+Purpose of Form.
+How to setup a form in Angular?
+What is form control and how to set it?
+What is ngForm?
+How to Access form values?
+What are the form states available in Angular?
+Form Validations.
+HTML5 Validation vs Angular form Validation.
+How to set default values in form fields?
+Setup One-way data binding in Angular.
+
+
+Section 12: Reactive Form in Angular
+What is Reactive Form?
+Difference between Template Drive & Reactive Form
+How to sync view & Reactive form TS?
+What is Reactive form control and how to set it?
+How to attach Dynamic Validations?
+How to get Reactive from Values?
+
+Section 13: Service and Dependency Injection in Angular
+What is Service in Angular?
+Create & configure Service in Angular.
+How to do Dependency Injection in Angular?
+What is Singleton Object?
+Multiple DI in single Class.
+
+
+Section 14: Routing in Angular 8
+What is Routing?
+How Routing makes our App into SPA?
+How to configure Routing in an Application?
+Load our components dynamically based on url path.
+How to create Child Route?
+Navigating to other links programmatically.
+Passing Parameter to the Routes.
+Static Route vs Dynamic Route.
+Fetching Route Params.
+
+
+Section 15: HTTP & Observable in Angular
+How to establish HTTP request to Server side.
+How HTTP Mechanism works?
+What are the methods available in HTTP?
+What is Observable & Observer?
+What are the call back methods available in Observable?
+How to create a Custom Observable?
+What is next(), error() and complete() ?
+How to connect any backend & APIs?
+What is CORS?
+How to resolve CORS errors?
+
+
+
+Section 16: Authorization in Angular
+Client side Authorization vs Server side Authorization.
+How to create Guard in Angular?
+Setup Route Guard.
+Server side Authorization by using JWT Token.
+HTTP interceptors.
+
+
+
+Section 17: File Upload in Angular
+Angular form setups for File Upload.
+Server side setups for Angular.
+Multer NPM in node.
+How to use Multer NPM as middleware in Node?
+Attach the Multer middleware in server-side routing.
+
+Section 18: Real-time Project in Angular
+Applying all the above in a real-time Shopping Cart Application.
+
+
+Technologies Used:
+Frontend : JavaScript, TypeScript, JSON, Angular
+
+Backend: Node JS, Express JS, MongoDB and 20+NPMs
+
+
+NodeJS
+
+Section 1: Introduction to Node JS
+What is Node JS?
+Overview of Node JS?
+How Node JS Works?
+Event-Driven concept overview
+
+
+
+Section 2: Node Package Manager
+What is NPM?
+What types of NPMs available?
+How to install NPMs?
+Different Useful NPMs example
+
+
+Section 3: Create a Node Server
+What is HTTP NPM?
+How to create a Node Server?
+How to run a Node Server?
+What is Nodemon NPM?
+
+
+
+Section 4: Express JS
+What is Express JS & why Express JS?
+Middleware Overview.
+Middleware Types and usage.
+What is request & Response Object?
+What are the Response methods available?
+Server-side Routing by using Express.
+Body-parser NPM overview
+Multer NPM overview
+RESTful API in Express
+
+
+Section 5: Json Web Token – JWT
+What is JWT?
+Why JWT?
+How to create JWT token?
+How to verify the JWT token?

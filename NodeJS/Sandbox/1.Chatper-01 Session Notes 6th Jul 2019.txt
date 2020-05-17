@@ -1,0 +1,110 @@
+Topics:
+	-Nodejs overview
+	-Create Nodejs project
+	-http module
+	-Callback concept
+	-File handling
+	-Express api 
+
+Note URL: https://github.com/vimleshtech/nodejs-summer-2019	
+Create Node Project:
+========================
+Step 1: Open VSCode(or other editor) 
+Step 2: Map workspace(any directory where you want to keep soure code)
+	File Menu -> Open Folder -> And browse folder
+
+Step 3: Press ctrl+` to show terminal 
+	or Go to view menu and click on Terminla or Integrated Terminal 
+
+Step 4: Create project now 
+
+	Create folder  
+	$mkdir <project-name>
+
+	Change directory 
+	$cd <project-name>
+
+	Initialize the project now
+	$npm init
+	
+	Install package: express
+	$npm install express
+	
+Step 5: Create file "main.js
+
+var http = require("http");
+
+http.createServer(function (request, response) {
+
+   // Send the HTTP header 
+   // HTTP Status: 200 : OK
+   // Content Type: text/plain
+   response.writeHead(200, {'Content-Type': 'text/plain'});
+   
+   // Send the response body as "Hello World"
+   response.end('Test Nodejs\n');
+}).listen(3010);
+
+// Console will print the message
+console.log('Server running at http://127.0.0.1:3010/');
+
+
+
+
+Step 5: Test the response in browser, 
+
+	Run the project
+	$node main.js	
+
+	Open the browser and type below url
+	http://127.0.0.1:3010
+
+
+Step 6: Callback concept 
+Callback is an asynchronous equivalent for a function. A callback function is called at the completion of a given task. Node makes heavy use of callbacks. All the APIs of Node are written in such a way that they support callbacks.
+
+	Create new file callbackexample.js
+	--------------------------------------
+
+Blocking Code Example:
+
+
+
+var fs = require("fs");
+var data = fs.readFileSync('input.txt');
+console.log(data.toString());
+console.log("Program Ended");
+
+
+
+Non-Blocking Code Example:
+
+
+var fs = require("fs");
+
+fs.readFile('input.txt', function (err, data) {
+   if (err) return console.error(err);
+   console.log(data.toString());
+});
+
+console.log("Program Ended");
+
+
+Step 7: Create router project with express(expose service)
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+	
+

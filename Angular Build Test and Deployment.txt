@@ -1,0 +1,97 @@
+For the simplest deployment, build for development and copy the output directory to a web server.
+
+>ng build
+
+Copy everything within the output folder (dist/ by default) to a folder on the server
+
+
+If you copy the files into a server sub-folder, append the build flag, --base-href and set the <base href> appropriately.
+
+For example, if the index.html is on the server at /my/app/index.html, set the base href to <base href="/my/app/"> like this.
+
+>ng build --base-href=/my/app/
+
+You'll see that the <base href> is set properly in the generated dist/index.html.
+
+***
+The main difference is – The ng build command writes generated build artifacts to the output folder and the ng serve command does not. The by default output folder is - dist/.
+
+
+The ng build --watch command will regenerate output files when source files change. This --watch flag is useful if you're building during development and are automatically re-deploying changes to another server.
+
+---------------------------
+
+Optimize for production
+Although deploying directly from the development environment works, you can generate an optimized build with additional CLI command line flags, starting with --prod.
+
+Build with --prod
+
+>ng build --prod
+
+The --prod meta-flag engages the following optimization features.
+
+Ahead-of-Time (AOT) Compilation: pre-compiles Angular component templates.
+Production mode: deploys the production environment which enables production mode.
+Bundling: concatenates your many application and library files into a few bundles.
+Minification: removes excess whitespace, comments, and optional tokens.
+Uglification: rewrites code to use short, cryptic variable and function names.
+Dead code elimination: removes unreferenced modules and much unused code.
+The remaining copy deployment steps are the same as before.
+
+You may further reduce bundle sizes by adding the build-optimizer flag.
+
+
+ng build --prod --build-optimizer
+
+
+--------------
+ng test
+Overview
+ng test compiles the application into an output directory
+
+Running unit tests
+ng test
+Tests will execute after a build is executed via Karma, and it will automatically watch your files for changes. You can run tests a single time via --watch=false.
+
+You can run tests with coverage via --code-coverage. The coverage report will be in the coverage/ directory.
+
+
+
+Setup
+
+The Angular CLI downloads and install everything you need to test an Angular application with the Jasmine test framework.
+
+The project you create with the CLI is immediately ready to test. Just run this one CLI command:
+
+
+ng test
+
+
+
+
+
+
+
+
+----------
+import { NgModule }         from '@angular/core';
+import { BrowserModule }    from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
+  ],
+  declarations: [
+    AppComponent,
+  ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+
+
+
+
+

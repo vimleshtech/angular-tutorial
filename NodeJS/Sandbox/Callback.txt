@@ -1,0 +1,56 @@
+Callback?
+Callback is an asynchronous equivalent for a function. A callback function is called at the completion of a given task. Node makes heavy use of callbacks. All the APIs of Node are written in such a way that they support callbacks.
+
+
+var myCallback = function(data) {
+  console.log('got data: '+data);
+};
+
+var usingItNow = function(callback) {
+  callback('get it?');
+};
+Now open node or browser console and paste the above definitions.
+
+Finally use it with this next line:
+
+usingItNow(myCallback);
+
+
+
+============================================
+var callback = function () {
+  console.log("10 seconds later...");
+};
+setTimeout(callback, 10000);
+
+================================================
+Here's an example using your code:
+
+function get_info(data, callback){
+
+      var sql = "SELECT a from b where info = data";
+
+      connection.query(sql, function(err, results){
+            if (err){ 
+              throw err;
+            }
+            console.log(results[0].objid); // good
+            stuff_i_want = results[0].objid;  // Scope is larger than function
+
+            return callback(results[0].objid);
+    }
+}
+
+
+//usage
+
+var stuff_i_want = '';
+
+ get_info(parm, function(result){
+    stuff_i_want = result;
+
+    //rest of your code goes in here
+ });
+When you call get_info this in turn calls connection.query, which takes a callback (that's what function(err, results) is
+The scope is then passed to this callback, and so on.
+

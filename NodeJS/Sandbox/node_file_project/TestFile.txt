@@ -1,0 +1,4 @@
+Hi
+
+This is my test file
+which will be read from nodejs code 

@@ -1,0 +1,89 @@
+Recap:
+
+	Component	
+	Events
+	Constructor
+	Objec and it's Operation 
+	CRUD
+	*NgFor
+	CSS and Bootstrap 
+	Pipe
+
+Today's Topics
+=========================
+Directive: is custom tag which can use anywhere in application to change sytle (innerHTML)
+-------------------------------------------------------	
+Create directive:
+-------------------------------------------------------
+	ng g d appColor
+
+	appColor.directive.ts
+	appColor.directive.spec.ts
+	
+
+	Sample code of directive:
+	------------------------------
+
+	@Directive({
+  
+		selector: '[appAppColor]'
+	
+})
+
+	export class AppColorDirective {
+
+  
+	
+		constructor() { }
+
+
+	
+	}
+
+
+ElementRef: is this keyword for html tag (DOM) which will take the reference of html 
+	
+	import { Directive,ElementRef } from '@angular/core';
+	constructor(el:ElementRef ) {
+
+      
+			el.nativeElement.color="green";
+    
+			//document.getElementById('ab').style.color="red";      
+
+   
+
+	}
+
+	
+	
+Use in a component: app.component.ts
+	
+	<div appAppColor>
+			
+	</div>
+	
+	
+Service
+-------------------------------------------------------
+Create Service:
+
+	ng g service myservice
+
+	
+@Injectable({
+  
+	providedIn: 'root'
+
+	})
+
+
+
+
+Parent-Childe
+	@Input
+	@Ouput
+	@ViewChild
+ 
+
+	

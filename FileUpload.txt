@@ -1,0 +1,89 @@
+FileUploader
+=====================
+Step 1: Create new node-project
+	$mkdir file-upload-folder
+	$cd file-upload-folder
+	$npm init
+
+Step 2: Install Dependency 
+	$npm install --save express
+	$npm install --save body-parser	
+				--read the data from request
+
+	$npm install --save multer 
+	$npm install --save dotenv 
+
+	$npm install nodemon --save-dev
+
+Step 3: Create server.js 		//// server.js
+	-and import required library 
+
+	const path = require('path');
+	const express = require('express');
+	const multer = require('multer');
+	const bodyParser = require('body-parser')
+
+	const app = express();
+
+	const DIR = './mydata';	//where need to save the file
+
+Step 4: Create the api  (method)
+	
+	
+	let x= multer.diskStorage({
+	
+		    destination: (req, file, cb) => {
+		
+			      cb(null, DIR);  //set directory path 
+		    },
+		    filename: (req, file, cb) => {
+		      cb(null, file.fieldname + '-' + Date.now() + '.' + 			path.extname(file.originalname));
+    		}
+	});
+
+
+	let upload = multer({storage: x});
+	
+
+
+	app.use(bodyParser.json());
+	app.use(bodyParser.urlencoded({extended: true}));
+ 
+	app.use(function (req, res, next) {
+	
+	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+	res.setHeader('Access-Control-Allow-Methods', 'POST,GET,PUT,DELETE');
+	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+	res.setHeader('Access-Control-Allow-Credentials', true);
+	next();
+	});
+ 
+
+
+	 app.get('file/upload',upload.single('photo'),functioni(req,res){
+
+		res.send('hi');
+
+	});
+		
+
+	app.liten(3010,function(){ 
+		console.log('running of port 3010');
+
+		})
+
+	
+
+	
+
+
+
+	
+
+
+
+			
+
+
+	
+	

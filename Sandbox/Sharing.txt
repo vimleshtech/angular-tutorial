@@ -1,0 +1,15 @@
+Checkbox
+RadioButton
+
+DataSharing:
+
+localStorage: keep data in browser/local memory and data can access from anywhere (globally)
+
+	localStorage.setItem()
+	localStorage.getItem()
+	localStorage.removeItem()
+	localStorage...
+
+	
+	
+	
